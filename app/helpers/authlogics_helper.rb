@@ -1,0 +1,2 @@
+module AuthlogicsHelper
+end
