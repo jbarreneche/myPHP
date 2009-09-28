@@ -1,0 +1,13 @@
+- title "Tags"
+
+%table
+  %tr
+    %th Name
+  - for tag in @tags
+    %tr
+      %td= tag.name
+      %td= link_to 'Show', tag
+      %td= link_to 'Edit', edit_tag_path(tag)
+      %td= link_to 'Destroy', tag, :method => :delete, :confirm => 'Are you sure?'
+%br
+= link_to 'New tag', new_tag_path
