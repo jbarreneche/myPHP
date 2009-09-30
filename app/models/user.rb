@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   def self.authenticate(login, pass)
     authlogic = find_by_username(login) || find_by_email(login)
     return authlogic if authlogic && authlogic.matching_password?(pass)
+    return InvalidUser.new
   end
   
   def matching_password?(pass)
@@ -34,5 +35,10 @@ class User < ActiveRecord::Base
   
   def encrypt_password(pass)
     Digest::SHA1.hexdigest([pass, password_salt].join)
+  end
+end
+class InvalidUser
+  def save
+    false
   end
 end
