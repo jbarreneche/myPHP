@@ -4075,3 +4075,270 @@ Completed in 24ms (View: 6, DB: 3) | 200 OK [http://localhost/]
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090928143941')[0m
   [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090925003702')[0m
+
+
+Processing SessionsController#destroy (for ::ffff:127.0.0.1 at 2009-09-30 17:28:15) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing TagsController#index (for ::ffff:127.0.0.1 at 2009-09-30 17:28:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tags"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:28:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 57ms (View: 17, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:28:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #5 of app/views/users/new.html.haml:
+2: 
+3: %p= "Already have an account? #{link_to "Log in", login_path}."
+4: 
+5: - form_for @authlogic do |f| 
+6:   = f.error_messages 
+7:   %p
+8:     = f.label :username
+
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:169:in `form_for'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/sass/plugin/rails.rb:19:in `process'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.9ms)
+Rendered rescues/_request_and_response (2.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:29:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for ::ffff:127.0.0.1 at 2009-09-30 17:29:18) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@user2.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"KdF3wXv5eYthIrY5uwA/8P35pygNJ2w4oumDtUzoxV4=", "controller"=>"users"}
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'user2') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user2@user2.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "password_salt", "password_hash", "email", "created_at") VALUES('2009-09-30 20:29:18', 'user2', 'ff5fe03e3fd5b56e4d739add5d8897f4a288e435', '1c6baa6a57932e07cfe7c6922ea5148fb877bbf5', 'user2@user2.com', '2009-09-30 20:29:18')[0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/users_controller.rb:3
+  haml (2.2.6) lib/sass/plugin/rails.rb:19:in `process'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for ::ffff:127.0.0.1 at 2009-09-30 17:29:58) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@user2.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"KdF3wXv5eYthIrY5uwA/8P35pygNJ2w4oumDtUzoxV4=", "controller"=>"users"}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'user2') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user2@user2.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 107ms (View: 5, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for ::ffff:127.0.0.1 at 2009-09-30 17:30:14) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"user", "password"=>"[FILTERED]", "email"=>"user@user2.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"KdF3wXv5eYthIrY5uwA/8P35pygNJ2w4oumDtUzoxV4=", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'user') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'user@user2.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "password_salt", "password_hash", "email", "created_at") VALUES('2009-09-30 20:30:14', 'user', '526d5a8dce77ee3456e04003ae4b023c5c1bf86d', 'd40be20b2fec332d7f1121ee8eb233abf927fb8b', 'user@user2.com', '2009-09-30 20:30:14')[0m
+Redirected to http://localhost:3000/users/3
+Completed in 41ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for ::ffff:127.0.0.1 at 2009-09-30 17:30:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+
+ActionView::MissingTemplate (Missing template users/show.erb in view path app/views):
+  haml (2.2.6) lib/sass/plugin/rails.rb:19:in `process'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for ::ffff:127.0.0.1 at 2009-09-30 17:30:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+
+NameError (undefined local variable or method `root_path' for UsersController:Class):
+  app/controllers/users_controller.rb:5
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for ::ffff:127.0.0.1 at 2009-09-30 17:30:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+
+NameError (undefined local variable or method `root_path' for UsersController:Class):
+  app/controllers/users_controller.rb:5
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagsController#index (for ::ffff:127.0.0.1 at 2009-09-30 17:31:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tags"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT * FROM "tags" [0m
+Rendering template within layouts/application
+Rendering tags/index
+Completed in 102ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for ::ffff:127.0.0.1 at 2009-09-30 17:31:16) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing TagsController#index (for ::ffff:127.0.0.1 at 2009-09-30 17:31:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tags"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:31:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:31:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NameError (undefined local variable or method `root_path' for UsersController:Class):
+  app/controllers/users_controller.rb:5
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:33:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NameError (undefined local variable or method `root_url' for UsersController:Class):
+  app/controllers/users_controller.rb:5
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (198.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for ::ffff:127.0.0.1 at 2009-09-30 17:34:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for ::ffff:127.0.0.1 at 2009-09-30 17:35:02) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"userr", "password"=>"[FILTERED]", "email"=>"usss@uss.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"KdF3wXv5eYthIrY5uwA/8P35pygNJ2w4oumDtUzoxV4=", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'userr') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'usss@uss.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("updated_at", "username", "password_salt", "password_hash", "email", "created_at") VALUES('2009-09-30 20:35:02', 'userr', '323c49e7cba021ff405856cc0b9838c7774790e8', 'a984fe7f06b89eb9f0b065cd3268330932b24a1c', 'usss@uss.com', '2009-09-30 20:35:02')[0m
+Redirected to http://localhost:3000/
+Completed in 72ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing TagsController#index (for ::ffff:127.0.0.1 at 2009-09-30 17:35:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tags"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mTag Load (18.0ms)[0m   [0mSELECT * FROM "tags" [0m
+Rendering template within layouts/application
+Rendering tags/index
+Completed in 54ms (View: 10, DB: 18) | 200 OK [http://localhost/]

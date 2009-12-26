@@ -1,5 +1,4 @@
 class SessionsController < ResourceController::Base
-
   #Create configuration    
   create.flash "Logged in successfully."
   create.failure.flash "Invalid login or password."

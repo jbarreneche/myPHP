@@ -2,7 +2,7 @@
 
 %p= "Already have an account? #{link_to "Log in", login_path}."
 
-- form_for @authlogic do |f| 
+- form_for @user do |f| 
   = f.error_messages 
   %p
     = f.label :username
@@ -12,9 +12,9 @@
     = f.label :email, "Email Address"
     %br
     = f.text_field :email
+    %br
   %p
     = f.label :password
-    %br
     = f.password_field :password
   %p
     = f.label :password_confirmation, "Confirm Password"
