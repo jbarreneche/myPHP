@@ -1,0 +1,94 @@
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+body.application {
+  color: #404040; }
+  body.application html, body.application body {
+    height: 100%; }
+  body.application #main-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -3em; }
+    body.application #main-container .push-footer {
+      height: 3em; }
+  body.application #footer-container {
+    clear: both;
+    position: relative;
+    height: 3em; }
+  body.application p, body.application h1, body.application h2, body.application h3, body.application h4, body.application h5, body.application h6, body.application a, body.application li, body.application span, body.application strong, body.application b, body.application em {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+  body.application pre, body.application code {
+    font-family: "Lucida Console", Monaco, monospace; }
+  body.application p, body.application h1, body.application h2, body.application h3, body.application h4, body.application h5, body.application h6 {
+    padding: 0.75em; }
+  body.application #main-container, body.application #footer-container {
+    overflow: auto;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; }
+  body.application #header {
+    border: 1px dashed #BBB;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; }
+    body.application #header h3 {
+      padding: 1.25em 0 0.5em 0;
+      text-align: center;
+      font-weight: normal;
+      font-size: 1.3em; }
+      body.application #header h3 strong {
+        font-weight: bolder; }
+    body.application #header h4 {
+      text-align: right;
+      color: #72757a; }
+  body.application #content, body.application #sidebar {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  body.application #content {
+    float: left;
+    width: 67%; }
+    body.application #content .header {
+      border: 1px dashed #BBB;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      padding: 0 1em 0; }
+    body.application #content .body {
+      padding: 0 1em 1em;
+      margin: 0 0 1em 0;
+      text-align: justify;
+      text-indent: 2.5em; }
+      body.application #content .body blockquote, body.application #content .body cite, body.application #content .body code, body.application #content .body pre {
+        margin: 0 2em 0 4em;
+        padding: 0 1em 0 2em;
+        background-color: #F5F5FF;
+        border-style: dashed;
+        border-color: #BBB;
+        border-width: 1px 0 1px 0; }
+  body.application #sidebar {
+    float: left;
+    width: 33%; }
+    body.application #sidebar ul {
+      list-style: none;
+      padding: 0em; }
+    body.application #sidebar li {
+      list-style: none;
+      padding: 0.25em; }
+    body.application #sidebar ul {
+      padding-left: 1.5em; }
+    body.application #sidebar li {
+      letter-spacing: .4em; }
+  body.application #body {
+    margin-right: 1em; }
+  body.application #footer-container {
+    text-align: right;
+    color: #72757a;
+    font-size: .75em; }
+  body.application #header, body.application #footer-container {
+    background-color: #EAF3FF; }
+  body.application #sidebar, body.application #body .header, body.application #body .body {
+    background-color: #EFF4FF; }

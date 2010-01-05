@@ -1,0 +1,97 @@
+@import base.sass
+
+*
+  margin: 0
+
+html, body
+  height: 100%
+
+body.application
+  !normal_color= #404040
+  !lighter_color= #72757A
+
+  +sticky-footer(3em, #main-container, .push-footer, #footer-container)
+
+  color= !normal_color
+
+  p, h1, h2, h3, h4, h5, h6, a, li, span, strong, b, em
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  pre, code
+    font-family: "Lucida Console", Monaco, monospace
+  p, h1, h2, h3, h4, h5, h6
+    padding: 0.75em
+
+  #main-container, #footer-container
+    overflow: auto
+    width: 95%
+    margin:
+      left: auto
+      right: auto
+
+  #header
+    +under-dash
+    h3
+      padding: 1.25em 0 0.5em 0
+      text-align: center
+      font:
+        weight: normal
+        size: 1.3em
+      strong
+        font-weight: bolder
+    h4
+      text-align: right
+      color= !lighter_color
+
+
+  #content, #sidebar
+    margin:
+      top: 1em
+      bottom: 1em
+
+  #content
+    float: left
+    width: 67%
+
+    .header
+      +under-dash
+      padding: 0 1em 0
+    .body
+      padding: 0 1em 1em
+      margin: 0 0 1em 0
+      text:
+        align: justify
+        indent: 2.5em
+      blockquote, cite, code, pre
+        margin: 0 2em 0 4em
+        padding: 0 1em 0 2em
+        background-color: #F5F5FF
+        border-style: dashed
+        border-color: #BBB
+        border-width: 1px 0 1px 0
+
+  #sidebar
+    float: left
+    width: 33%
+    +link-list
+    ul
+      padding-left: 1.5em
+    li
+      letter-spacing: .4em
+  #body
+    margin-right: 1em
+
+  #footer-container
+    text:
+      align: right
+    color= !lighter_color
+    font:
+      size: .75em
+
+  #header, #footer-container
+    background:
+      color: #EAF3FF
+
+  #sidebar, #body .header, #body .body
+    background:
+      color: #EFF4FF
+
