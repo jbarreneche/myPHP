@@ -1,1 +1,2 @@
 authlogic --version '>= 2.1.0'
+inherited_resources --version '>= 1.0.0'
