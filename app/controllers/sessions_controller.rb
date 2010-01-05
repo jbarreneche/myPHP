@@ -1,25 +1,23 @@
-class SessionsController < ResourceController::Base
-  #Create configuration    
-  create.flash "Logged in successfully."
-  create.failure.flash "Invalid login or password."
-  create.wants.html { redirect_to_target_or_default(root_url) }
-  create.after do
-    session[:authlogic_id] = @user.id
+class SessionsController < InheritedResources::Base
+  actions :create, :new
+  defaults :resource_class => UserSession
+  def create
+    create! do |success, failure|
+      success.html { redirect_to_target_or_default(root_url) }
+    end
+    session[:authlogic_id] = @user.id if @user
   end
 
-  
   def destroy
-    session[:authlogic_id] = nil
     flash[:notice] = "You have been logged out."
+    session[:authlogic_id] = nil
     redirect_to root_url
   end
-  
+
   private
-  def object
-    @user = User.authenticate(params[:login], params[:password])
+  def resource
+    @user ||= User.authenticate(params[:login], params[:password])
   end
 
-  def model_name
-    'user_session'
-  end
 end
+

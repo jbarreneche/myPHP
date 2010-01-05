@@ -1,6 +1,10 @@
-class UsersController < ResourceController::Base
+class UsersController < InheritedResources::Base
+  actions :create, :new
 
-  create.after  { session[:authlogic_id] = @user.id }
-  create.flash "Thank you for signing up! You are now logged in."
-  create.wants.html {redirect_to root_url}
+  def create
+    create! { root_url }
+    session[:authlogic_id] = @user.id if @user
+  end
+
 end
+
