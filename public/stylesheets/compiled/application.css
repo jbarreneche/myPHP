@@ -68,7 +68,13 @@ body.application {
         background-color: #F5F5FF;
         border-style: dashed;
         border-color: #BBB;
-        border-width: 1px 0 1px 0; }
+        border-width: 1px 0 1px 0;
+        text-indent: 0em; }
+      body.application #content .body ul {
+        text-indent: 0em;
+        padding: 0.5em 4em; }
+      body.application #content .body li {
+        padding: 0.25em; }
   body.application #sidebar {
     float: left;
     width: 33%; }
@@ -84,6 +90,8 @@ body.application {
       letter-spacing: .4em; }
   body.application #body {
     margin-right: 1em; }
+    body.application #body p {
+      padding: 0.25em 1.25em; }
   body.application #footer-container {
     text-align: right;
     color: #72757a;
