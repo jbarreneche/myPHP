@@ -1,34 +1,36 @@
 !!!
-%head
-  = stylesheet_link_tag 'compiled/application'
-%body.application
-  #main-container
-    #header
+%html
+  %head
+    %link(rel='shortcut icon' type='image/x-icon' href='/favicon.ico')
+    = stylesheet_link_tag 'compiled/application'
+  %body.application
+    #main-container
+      #header
+        :textile
+
+          h3. *\#{page_title}* # _output the title for the new webpage_
+
+          h4. enjoy the ride (but not _too_ much)
+
+      #content
+        #body
+          = yield
+        .push-footer
+      #sidebar
+        %ul
+          %li link1
+          %li link2
+        %pre
+          :preserve
+                   \`\ /`/
+                    \ V /
+                    /. .\
+                   =\ T /=
+                    / ^ \
+                 {}/\\ //\
+                 __\ " " /__
+                (____/^\____)
+    #footer-container
       :textile
-
-        h3. *\#{page_title}* # _output the title for the new webpage_
-
-        h4. enjoy the ride (but not _too_ much)
-
-    #content
-      #body
-        = yield
-      .push-footer
-    #sidebar
-      %ul
-        %li link1
-        %li link2
-      %pre
-        :preserve
-                 \`\ /`/
-                  \ V /
-                  /. .\
-                 =\ T /=
-                  / ^ \
-               {}/\\ //\
-               __\ " " /__
-              (____/^\____)
-  #footer-container
-    :textile
-      _The copyright(c) it's aligned left :)_
+        _The copyright(c) it's aligned left :)_
 
