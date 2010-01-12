@@ -84,3 +84,70 @@ h4. Nuestra guía en este post será la %{color:#e1b7b7; text-transform: upperca
 h4. Pero todos sabemos que la vida y nuestro mundo son un regalo, y, como toda rosa, _algo que no le faltan son_ %{color: green}*espinas*%.
 POST
 
+Post.create!(:title => 'Inocencia... Inociencia... Mi ciencia', :body => <<POST, :created_at => Date.new(2005, 3, 2))
+Soy inocente conciente. Conciente que, si me mirás a los ojos y me lo decís, te voy a creer.
+
+Alguien me dijo que los marcianos existen, lo miré a los ojos, y después me quedé toda la noche contemplando el cielo para poder ver uno.
+-¿Eso me convierte en tonto o en soñador?
+
+Me hablaron de reyes magos y de gordos voladores vestidos en trajes exóticos. Desde hace 20 años sigo esperando el fin de año para que vengan a visitarme.
+-¿Soy tonto o paciente?
+
+Me sorprendía la aparición de nuevos niños en este mundo, y un viejo sabio me explicó que nacían de los repollos. Desde entonces me parece una crueldad que los vendan en verdulerías.
+-¿Soy tonto o sensible?
+
+Hace unas semanas vi una pareja en un parque y alguien me mencionó el amor.
+-¿Que tan tonto soy si creo en eso?
+POST
+
+Post.create!(:title => 'Siempre es invierno en la ciudad', :body => <<POST, :created_at => Date.new(2006, 8, 27))
+Finalmente el sol sale, nuevamente los calendarios avisan que es primavera. Claramente se puede oir a lo lejos el cantar de algunas aves. Son las últimas que quedan por estos lares, son esas que se resisten a abandonar a este mundo y dejarlo en manos del tirano metal y del vil concreto. Pero no saben que ya es demasiado tarde. Nunca van a entender que no queda esperanza para esta ciudad.
+
+Luego de un par de horas el sol llega a lo mas alto del cielo, sus rayos ya alcanzan toda la superficie de la ciudad. Pero hay corazas que no puede atravesar. Hay miles de cáscaras que encierran el motor de nuestra vida. A esas ni siquiera llega a tocarlas.
+
+¿Cómo podría ser primavera si la forma de sentirla se encuentra nublada por toneladas de smog, miles de frivolidades e infinitas miradas que solo buscan el éxito personal? ¿Cómo podría serlo, si nadie puede sentirlo? ¿Cómo podría serlo, si quién se jacta de ser cálido únicamente lo hace por ser poco menos frío que quién lo rodea y al momento de demostrarlo lo hace con una sonrisa mal dibujada en su rostro?
+
+Las miradas se entrecruzan en la calle, pero ninguna entra por los ojos. Ninguna se toma el tiempo de realizar el largo viaje hacia el interior del otro que empieza por esas dos ventanas. No sirve echarle la culpa al pasado personal si siempre se fue así, o si al menos nuestro entorno nos forjó así.
+
+bq. No sirve sacar planetas ni agregar soles, de todas maneras el frío ya está en nuestros corazones.
+POST
+
+Post.create!(:title => 'Wondering', :body => <<POST, :created_at => Date.new(2006, 9, 8))
+A veces lo que sobran son las preguntas, esa noche fue una de esas oportunidades. Como con temor, me dijo: “problemas… ¿Qué es lo que pensás de los problemas?”. Preguntas difíciles hay muchas, la mayoría de ellas carecen de respuestas. Pero a esta justamente respuestas no le faltan… Esta es una pregunta difícil, no por carecer de respuesta, sino porque la misma implica una actitud ante la vida. Una forma de ser, la forma de recibir lo que no queremos. Mi respuesta pareció sorprenderla, se quedó dubitativa por unos momentos y luego disparó lo siguiente: “¿Qué es lo primero que solés hacer con ellos?... digo, por ejemplo, esquivarlos, negarlos, enfrentarlos, mirarlos, gritarles fuerte a la cara y luego quebrar en llanto…”. Dudé por unos instantes que responder. Cada problema nuevo es un nuevo desafío, una situación distinta. Pero luego, en voz baja me hice entender. Se que quizás no sea la mejor forma de reaccionar ante ellos, pero en ese momento sabía que así era como yo era. Los problemas que son sólo de mente suelen ser menos complicados, y ella lo sabía, por lo cual no tardó en meter a mis sentimientos en juego. Levantó lentamente su mirada buscando mis ojos, y con voz segura dijo: “Y si sabés que algo te va a traer problemas, pero es algo que querés… ¿Qué hacés?...”. Guardé silencio por unos minutos. Que tanto, pregunté inocentemente. Tanto como lo que estás deseando desde el momento en que comenzamos a hablar... y hablo de problemas serios. Problemas serios, como en los que sabés que te estás metiendo.
+POST
+
+Post.create!(:title => 'Rain drops', :body => <<POST, :created_at => Date.new(2006, 10, 6))
+_Tip-Tap... tip tap... tap-tap... tip-tap_
+
+... Y aquel líquido que alguna vez se evaporó de tus mejillas vuelve a la tierra para refrescarla. Al fin y al cabo alguien tiene que apaciguar el fuego que desata el odio entre la gente. Esas gotas dispersas que se aproximan velozmente finalmente se estrellan contra la tierra para luego acumularse donde y como pueden. Es increible como la naturaleza nos da señales de unión entre millones y millones, y a nosotros nos cuesta conseguirla tan solo entre unos pocos. No fuimos hechos para estar juntos, pero tampoco podemos separarnos. Necesitamos beber sangre de los mas débiles asi como otros beben de la nuestra. No nos alcanza con el agua, no nos alcanza con el nectar de las frutas, simplemente no nos alcanza.
+
+_Tip-Tap... tip tap... tap-tap... tip-tap_
+POST
+
+Post.create!(:title => '2x1 _(negoción)_', :body => <<POST, :created_at => Date.new(2006,2,19))
+h2. Missing People
+
+Mis oídos chiflan extrañamente a las mañanas y, mientras mis pies sudan, puedo notar como todo a mi alrededor se tambalea de forma inusual pero que, extrañamente, se ha convertido en lo normal. Cambio tras cambio, caras bonitas detras de mas caras se desdibujan y se re-escriben en un sin fin de vueltas y contornos. Son todas imágenes que cambian de manera aparentemente aleatoria pero que en realidad se encuentran coordinadas con el ir y venir de los astros que, en ciertas ocasiones, me alegran la existencia.
+
+Esos astros son los que, cuando milagrosamente se acuerdan que tu ser sigue vivo, te hechizan y logran distraerte de las maldades y atrocidades que ocurren en este mundo. Pero estos hechos son sólo algo temporario, una ilusión diría yo, algo que tras algunos días o semanas nuevamente se vuelve a obscurecer y se escapa lentamente tras un velo discreto y silencioso...
+
+Todo se repite. Despierto y a mi alrededor todo se vuelve a tambalear mientras mis oídos chiflan de manera estrepitosa. Nuevamente mis pies se encuentran transpirados y me cuesta encontrar la estabilidad en el suelo. Las piezas a mi alrededor han vuelto a cambiar....
+
+p=. *---- > ooOoOOoOooo < ---*
+_(pausa breve, cambio de angulo de la cámara, raconto y conclusión final)_
+
+Ciertamente es interesante recuperar rostros conocidos. Pero algunas distancias que se crean con gente nueva no hacen mas que preocuparme. Nunca había visto una flor tan de cerca, generalmente suelo regalarlas sin prestarles mucha mas atención, pero ver a esa, que estuve a punto de abandonar, extraer sus propias raices de la tierra fertil solamente para alejarse de manera inevitable de mi, no es algo que me agrade.
+
+En este universo existen el agua y el aceite para mantenerse separados. Agitar y presionar puede juntarlos momentaneamente, pero todos sabemos que, tarde o temprano, se volverán a separarar.
+
+h2. Love Fuse _(Paradox from "Funny fuse")_:
+
+En algún lugar cercano a tu habitat existe una fuente "inagotable" de electrones mágicos, diminutos y, por sobretodo, poderosos. Estos llegan a tus sedientos electrodomésticos, mediante algún conductor de primera especie, quienes los aprovechan como las alimanias del desierto aprovechan a las escazas lluvias.
+
+Pero no todo es regocijo en este edén de alimentación alterna. Algunas luchas internas o acercamientos excesivos pueden, en menos de lo que canta un gallo, aniquilar por completo a todas las razas y especies que habitan en tu hogar. Esto sería una típica historia de terror si no fuera porque existe un mágico protector que, cuando cree que todo puede llegara estallar, de manera misteriosa y sin preguntarle a nadie somete a todos los seres a un profundo sueño como en muchos cuento de hadas.
+
+Todos tenemos nuestro protector. Puede que no siempre funcione a tiempo, no conozco casos que lo haya hecho, pero eso sería un pequeñisimo problema comparado con el de su excesivo funcionamiento. Luego de que todo ha sido letargado debería aparecer el restaurador para que retorne el orden y la tranquilidad en nuestro interior.
+
+Luego que el mio ha funcionado, y no porque el lo haya decidido sino mas bien porque lo forzaron, me encuentro a la espera de ese alguien que todo lo despierte. Mientras me conformaré con ser la persona inerte en que me he convertido. He sido rebautizado como el Helio de las reacciones y el Platino de las electrólisis.
+POST
+
