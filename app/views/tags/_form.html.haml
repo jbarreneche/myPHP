@@ -1,7 +1,9 @@
-- form_for @tag do |f|
+- tag = form
+- form_for tag do |f|
   = f.error_messages
   %p
     = f.label :name
     %br
     = f.text_field :name
-  %p= f.submit "Submit" 
+  %p= f.submit "Submit"
+

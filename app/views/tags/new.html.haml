@@ -1,5 +1,6 @@
 - title "New Tag"
 
-= render :partial => 'form'
+= render :partial => 'form', :object => @tag
 
-%p= link_to "Back to List", tags_path 
+%p= link_to "Back to List", tags_path
+
