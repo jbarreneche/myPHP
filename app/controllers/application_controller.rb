@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   layout 'application'
-  include Authentication
+  # include Authentication
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   after_filter :set_encoding
